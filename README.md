@@ -13,7 +13,7 @@ The approach is divided into different Jypyter Notebooks to guide the workflow.
 - **Notebook 00_NewProject** - Define and create the new project directory to save and process data. 
 
 
-Once you have created the project folder structure, copy an existing config_porject.py to your "projectname/" folder.
+Once you have created the project folder structure, copy an existing "config_porject.py" to your "projectname/" folder.
 
 You should also have a "credentials.py" file in your "local_directory_folder/". 
 
@@ -24,7 +24,7 @@ You should also have a "credentials.py" file in your "local_directory_folder/".
 The directory structure of the UCLIM framework looks like this: 
 
 ```
-local_directory_folder/     <- directory defined in path_to_data.txt
+local_directory_folder/         <- directory defined in path_to_data.txt
 │             		
 ├── projectname1/			<- Database divided by project (city) - Example: London
 │   ├─ data/
@@ -56,7 +56,7 @@ local_directory_folder/     <- directory defined in path_to_data.txt
 │   ├─ results/
 │       ├─...
 │
-│   ├─config_porject.py
+│   ├─**config_porject.py**
 │
 ├─ **credentials.py**           <- Private file with usernames, passwords and API tokens
 │
