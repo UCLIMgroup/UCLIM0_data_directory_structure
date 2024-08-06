@@ -13,9 +13,10 @@ The approach is divided into different Jypyter Notebooks to guide the workflow.
 - **Notebook 00_NewProject** - Define and create the new project directory to save and process data. 
 
 
-Once you have created the project folder structure, copy an existing "config_porject.py" to your "projectname/" folder.
-
+Once you have created the project folder structure, copy an existing "config_porject.py" to your "projectname/" folder. 
 You should also have a "credentials.py" file in your "local_directory_folder/". 
+
+You can find examples of "config_porject.py" and "credentials.py" in the [git](https://github.com/UCLIMgroup/UCLIM0_data_directory_structure/tree/main/z_project_data_example)
 
 
 ## The directory structure
