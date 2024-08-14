@@ -1,5 +1,11 @@
 
-#this *.py file is only introduced to generate automatically the requirement.txt file
+
+#the code "pipreqs ." is used to generate the requirement.txt file
+#however, this code doesn't work properly with notebooks
+#this file is used to list all the libraries used in the project
+#to that "pipreqs ." is able to generate automatically the requirement.txt file
+
+#All libraries used in the notebooks should be listed here. Verify if all libraries are listed before running "pipreqs ."
 
 
 import os
