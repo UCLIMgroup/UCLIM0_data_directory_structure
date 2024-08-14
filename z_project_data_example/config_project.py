@@ -57,15 +57,38 @@ cwd_project = os.path.dirname(__file__)
 
 # Now using os.path.join for all paths to ensure compatibility across different OS
 
+#data
+cwd_data_raw = os.path.join(cwd_project, "data", "10_raw")
+cwd_data_raw_netatmo = os.path.join(cwd_project, "data", "10_raw","netatmo")
+cwd_data_raw_wunder = os.path.join(cwd_project, "data", "10_raw","wunder")
 
-cwd_results = os.path.join(cwd_project, "results")
-cwd_results_figures = os.path.join(cwd_project,"results","figures")
-cwd_data_raw = os.path.join(cwd_project, "data", "0_raw")
-cwd_data_raw_netatmo = os.path.join(cwd_project, "data", "0_raw","netatmo")
-cwd_data_raw_wunder = os.path.join(cwd_project, "data", "0_raw","wunder")
-cwd_data_str = os.path.join(cwd_project, "data", "1_structured")
-cwd_data_filt = os.path.join(cwd_project, "data", "2_filtered")
-cwd_data_proc = os.path.join(cwd_project, "data", "3_processed")
+cwd_data_str = os.path.join(cwd_project, "data", "11_structured")
+
+cwd_data_qc = os.path.join(cwd_project, "data", "20_quality_control")
+cwd_data_gap = os.path.join(cwd_project, "data", "21_gap_filling")
+
+cwd_data_spatial = os.path.join(cwd_project, "data", "30_generation_spatial")
+cwd_data_temporal = os.path.join(cwd_project, "data", "30_generation_temporal")
+
+cwd_data_analysis = os.path.join(cwd_project, "data", "40_analysis")
+cwd_data_application = os.path.join(cwd_project, "data", "50_application")
+
+
+#results
+cwd_results_raw = os.path.join(cwd_project, "results", "10_raw")
+cwd_results_raw_netatmo = os.path.join(cwd_project, "results", "10_raw","netatmo")
+cwd_results_raw_wunder = os.path.join(cwd_project, "results", "10_raw","wunder")
+
+cwd_results_str = os.path.join(cwd_project, "results", "11_structured")
+
+cwd_results_qc = os.path.join(cwd_project, "results", "20_quality_control")
+cwd_results_gap = os.path.join(cwd_project, "results", "21_gap_filling")
+
+cwd_results_spatial = os.path.join(cwd_project, "results", "30_generation_spatial")
+cwd_results_temporal = os.path.join(cwd_project, "results", "30_generation_temporal")
+
+cwd_results_analysis = os.path.join(cwd_project, "results", "40_analysis")
+cwd_results_application = os.path.join(cwd_project, "results", "50_application")
 
 
                       
