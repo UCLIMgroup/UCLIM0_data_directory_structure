@@ -1,8 +1,8 @@
-# Please fill in the following variables with your own credentials
+'''Please fill in the following variables with your own credentials'''
 
-#Wunderground
+#Weather Underground
 #Token for API authorization (the information below is an example)
-token_wunder = '8f7a9b1c2d3e4f5g6h7i8j9k8f7a9b1c'
+TOKEN_WUNDER = '8f7a9b1c2d3e4f5g6h7i8j9k8f7a9b1c'
 
 #Netatmo
 #Tokens for API authorization (the information below is an example)
