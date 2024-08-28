@@ -1,50 +1,41 @@
+'''Input data required to select the city and the timeframe for data extraction.'''
+
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Nov 13 12:05:20 2021
 
-@author: Jesus Lizana
-
-"""
-
+#%%
+#Libraries
 import os
-
-#geodata
 import geopy
 from geopy import distance
-                       
-#%%	
-###########################################################
 
-#INPUT DATA required to select city
+#%%
+#Name of the city
+CITY = "London"
 
-###########################################################
-
-city = "London"
-
-#location and extent
-lat = 51.515313777970874
-long = -0.1297586219709724
-plot =  70  # to define the grid size to map in km (kmxkm), e.g. 70 = 70x70km2
+#Location and extent
+LAT = 51.515313777970874
+LONG = -0.1297586219709724
+PLOT =  70  # to define the grid size to map in km (kmxkm), e.g. 70 = 70x70km2
 
 
-#timeframe for data extraction -- day-month-year
-first_date='01-01-2023 00:00'  
-last_date='31-12-2023 23:00'
+#Timeframe for data extraction -- day-month-year
+FIRST_DATE='01-01-2023 00:00'
+LAST_DATE='31-12-2023 23:00'
 
 #Timeframe criteria to eliminate statations with data availability <90%  -- day-month-year
-first_date1='20-05-2023'  
-last_date1='20-09-2023'
+FIRST_DATE_QC='20-05-2023'
+LAST_DATE_QC='20-09-2023'
 
 #colors
-color_net = 'lightskyblue' 
-color_wund ="royalblue" 
-color_ows ='k'
-color_cws = 'blue'
-color_outliers = 'r'
+COLOR_NET = 'lightskyblue'
+COLOR_WUND ="royalblue"
+COLOR_OWS ='k'
+COLOR_CWS = 'blue'
+COLOR_OUTLIERS = 'r'
 
 
-                       
-#%%	
+
+#%%
 
 ###########################################################
 
@@ -91,28 +82,29 @@ cwd_results_analysis = os.path.join(cwd_project, "results", "40_analysis")
 cwd_results_application = os.path.join(cwd_project, "results", "50_application")
 
 
-                      
-#%%	
+
+#%%
 
 #Definition of extent - frame for mapping
-dist = plot/2
-center_pt = [lat,long]
+DIST = PLOT/2
+center_pt = [LAT,LONG]
 
 #calculation of zoom in coordenadas
 # given: lat1, lon1, b = bearing in degrees, d = distance in kilometers
 origin = geopy.Point(center_pt)
 
 #lat
-a = distance.distance(kilometers=dist).destination(origin,0) #lat
+a = distance.distance(kilometers=DIST).destination(origin,0) #lat
 lat_d = repr(a[0])
-lat_d = float(lat_d) - float(lat)
+lat_d = float(lat_d) - float(LAT)
 
 #long
-b = distance.distance(kilometers=dist).destination(origin,90) #lat
+b = distance.distance(kilometers=DIST).destination(origin,90) #lat
 lon_d = repr(b[1])
-lon_d = float(lon_d) - float(long)
- 
+lon_d = float(lon_d) - float(LONG)
+
 #Definition of extent - frame for mapping
-extent = [center_pt[1]-lon_d,center_pt[1]+lon_d,center_pt[0]-lat_d,center_pt[0]+lat_d] # adjust to zoom  
-
-
+extent = [center_pt[1]-lon_d,
+          center_pt[1]+lon_d,
+          center_pt[0]-lat_d,
+          center_pt[0]+lat_d] # adjust to zoom
