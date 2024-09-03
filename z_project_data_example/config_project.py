@@ -19,12 +19,12 @@ from geopy import distance
 
 ###########################################################
 
-city = "London"
+city = "Paris"
 
 #location and extent
-lat = 51.515313777970874
-long = -0.1297586219709724
-plot =  70  # to define the grid size to map in km (kmxkm), e.g. 70 = 70x70km2
+lat = 48.83
+long = 2.349092294549077
+plot =  75  # to define the grid size to map in km (kmxkm), e.g. 70 = 70x70km2
 
 
 #timeframe for data extraction -- day-month-year
